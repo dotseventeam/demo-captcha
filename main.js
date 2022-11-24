@@ -8,7 +8,7 @@ function showCaptcha() {
 };
 
 function loginSuccess() {
-    window.location.href = successPage;
+    window.location.replace(successPage);
 }
 
 function loginFailed() {
