@@ -18,18 +18,25 @@ let dataset = [
         wrongAns2: 'Incendio',
     },
     {
-        src: '/res/1.png',
-        firstAns: 'Canguro',
-        secondAns: 'Mela',
-        wrongAns1: 'Pallone',
-        wrongAns2: 'Incendio',
+        src: '/res/2.png',
+        firstAns: 'Cane',
+        secondAns: 'Chitarra',
+        wrongAns1: 'Trottola',
+        wrongAns2: 'Scimpanzè',
     },
     {
-        src: '/res/1.png',
-        firstAns: 'Canguro',
-        secondAns: 'Mela',
-        wrongAns1: 'Pallone',
-        wrongAns2: 'Incendio',
+        src: '/res/3.png',
+        firstAns: 'Barca',
+        secondAns: 'Martello',
+        wrongAns1: 'Zanzara',
+        wrongAns2: 'Aeroplano',
+    },
+    {
+        src: '/res/4.png',
+        firstAns: 'Ponte',
+        secondAns: 'Rosa',
+        wrongAns1: 'Bastone',
+        wrongAns2: 'Onda',
     }
 ];
 
