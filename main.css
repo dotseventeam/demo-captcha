@@ -70,14 +70,18 @@ body {
 
 /* MODAL STYLING */
 .captcha-modal {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: auto;
+    max-width: 97vw;
+    max-height: 90vh;
     position: absolute;
     display: none;
     background-color: #222;
     border-radius: 8px;
+    padding: 30px;
 }
 
+/* per mostrare il modal da js */
 .is-active {
     display: flex;
     flex-direction: column;
@@ -85,9 +89,42 @@ body {
     justify-content: center;
 }
 
+.captcha-question {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.captcha-img {
+    display: block;
+    width: 80%;
+    /* max-width: fit-content; */
+}
+
+.captcha-opt-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    height: 20vh;
+}
+
+.captcha-opt-container {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.captcha-opt {
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+
+
 #captcha-submit {
     width: 80px;
-    height: 40px;
+    height: 80px;
     border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: none;
 }

@@ -23,7 +23,26 @@
         </form>
         <button id="login-btn">Login</button>
         <div class="captcha-modal">
-            <img src="" alt="" class="captcha-img">
+            <h2 class="captcha-question">Cosa vedi nell'immagine?</h2>
+            <img src="res/1.png" alt="immagine captcha" class="captcha-img">
+            <form action="GET" class="captcha-opt-form">
+                <div class="captcha-opt-container">
+                    <input id="captcha-opt-1" type="checkbox" class="captcha-opt" name="opt1"><label
+                        class="captcha-opt-label" for="opt1" id="captcha-opt-label-1">opt1</label>
+                </div>
+                <div class="captcha-opt-container">
+                    <input id="captcha-opt-2" type="checkbox" class="captcha-opt" name="opt2"><label
+                        class="captcha-opt-label" for="opt2" id="captcha-opt-label-2">opt2</label>
+                </div>
+                <div class="captcha-opt-container">
+                    <input id="captcha-opt-3" type="checkbox" class="captcha-opt" name="opt3"><label
+                        class="captcha-opt-label" for="opt3" id="captcha-opt-label-3">opt3</label>
+                </div>
+                <div class="captcha-opt-container">
+                    <input id="captcha-opt-4" type="checkbox" class="captcha-opt" name="opt4"><label
+                        class="captcha-opt-label" for="opt4" id="captcha-opt-label-4">opt4</label>
+                </div>
+            </form>
             <button id="captcha-submit">Submit</button>
         </div>
     </div>
