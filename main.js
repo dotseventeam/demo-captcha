@@ -3,6 +3,10 @@ let login = document.getElementById('login-btn');
 let submit = document.getElementById('captcha-submit');
 let successPage = 'http://127.0.0.1:5500/logged.html';
 
+let user = document.getElementById('username').value;
+// let user = document.forms['login-form']['username'].value;
+// let password = document.forms['login-form']['password'].value;
+
 let img = document.querySelector('.captcha-img');
 let opt1 = document.getElementById('captcha-opt-label-1');
 let opt2 = document.getElementById('captcha-opt-label-2');
@@ -45,6 +49,7 @@ let rightAnswers = [];
 let wrongAnswers = [];
 
 function showCaptcha() {
+    // mettere qui il check per username e pass
     generateCaptcha();
     modal.classList.add('is-active');
 };

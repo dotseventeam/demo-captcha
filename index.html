@@ -15,13 +15,13 @@
             <img src="/dotseven.png" alt="dot seven logo" class="logo">
             <h1>CAPTCHA</h1>
         </div>
-        <form action="" class="login-form">
+        <form action="post" name="login-form" class="login-form">
             <label for="username">Username</label>
-            <input placeholder="username" name="username" type="text" id="username">
+            <input placeholder="username" name="username" type="text" id="username" required>
             <label for="password">Password</label>
-            <input placeholder="password" name="password" type="text" id="password">
+            <input placeholder="password" name="password" type="text" id="password" required>
         </form>
-        <button id="login-btn">Login</button>
+        <input type="submit" value="Entra" id="login-btn">
         <div class="captcha-modal">
             <h2 class="captcha-question">Cosa vedi nell'immagine?</h2>
             <img src="res/1.png" alt="immagine captcha" class="captcha-img">
@@ -43,7 +43,7 @@
                         class="captcha-opt-label" for="opt4" id="captcha-opt-label-4">opt4</label>
                 </div>
             </form>
-            <button id="captcha-submit">Submit</button>
+            <input type="submit" id="captcha-submit">
         </div>
     </div>
     <script src="main.js"></script>
