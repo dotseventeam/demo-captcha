@@ -6,7 +6,7 @@
 
 body {
     color: white;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +49,7 @@ body {
 }
 
 .login-form input {
+    font-family: 'Poppins', sans-serif;
     background-color: lightgrey;
     padding: 0.5em;
     border-style: none;
@@ -63,6 +64,10 @@ body {
     height: 40px;
     border-radius: 10px;
     border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #111;
+    background-color: greenyellow;
 }
 
 
@@ -103,14 +108,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin-top: 40px;
     margin-bottom: 20px;
     height: 20vh;
 }
 
 .captcha-opt-container {
-    margin-left: 40px;
-    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    flex-basis: 30%;
 }
 
 .captcha-opt {
@@ -121,9 +131,10 @@ body {
 
 #captcha-submit {
     width: 80px;
-    height: 40px;
+    height: 80px;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
     border: none;
+    font-family: 'Poppins', sans-serif;
 }
