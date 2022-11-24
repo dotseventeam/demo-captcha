@@ -24,7 +24,7 @@ body {
     border-radius: 8px;
     margin-top: 20vh;
     box-shadow: 0 0 2px 2px rgba(211, 255, 3, 255);
-
+    position: relative;
 }
 
 .logo-container {
@@ -64,5 +64,30 @@ body {
     height: 40px;
     border-radius: 10px;
     border: none;
+}
 
+
+
+/* MODAL STYLING */
+.captcha-modal {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: none;
+    background-color: #222;
+    border-radius: 8px;
+}
+
+.is-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#captcha-submit {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
 }
