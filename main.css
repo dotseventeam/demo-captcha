@@ -119,13 +119,11 @@ body {
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-    justify-content: flex-start;
     flex-basis: 30%;
 }
 
 .captcha-opt {
-    margin-left: 0.4em;
-    margin-right: 0.4em;
+    margin-right: 10px;
 }
 
 
