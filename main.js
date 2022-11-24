@@ -45,6 +45,11 @@ let rightAnswers = [];
 let wrongAnswers = [];
 
 function showCaptcha() {
+    generateCaptcha();
+    modal.classList.add('is-active');
+};
+
+function generateCaptcha() {
     let rand = Math.floor(Math.random() * dataset.length);
     pickedImg = dataset[rand];
     img.src = pickedImg.src;
@@ -84,18 +89,19 @@ function showCaptcha() {
     } else {
         wrongAnswers.push('captcha-opt-4');
     }
-    //----------------------------------------------
-
-
-    modal.classList.add('is-active');
-};
+}
 
 function loginSuccess() {
     window.location.replace(successPage);
 }
 
 function loginFailed() {
-    console.log('login failed');
+    alert('Verifica fallita! Riprovare.');
+    document.getElementById('captcha-opt-1').checked = false;
+    document.getElementById('captcha-opt-2').checked = false;
+    document.getElementById('captcha-opt-3').checked = false;
+    document.getElementById('captcha-opt-4').checked = false;
+    generateCaptcha();
 }
 
 function validateCaptcha() {
