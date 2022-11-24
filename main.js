@@ -3,7 +3,6 @@ let login = document.getElementById('login-btn');
 let submit = document.getElementById('captcha-submit');
 let successPage = 'http://127.0.0.1:5500/logged.html';
 
-let user = document.getElementById('username').value;
 // let user = document.forms['login-form']['username'].value;
 // let password = document.forms['login-form']['password'].value;
 
@@ -12,6 +11,9 @@ let opt1 = document.getElementById('captcha-opt-label-1');
 let opt2 = document.getElementById('captcha-opt-label-2');
 let opt3 = document.getElementById('captcha-opt-label-3');
 let opt4 = document.getElementById('captcha-opt-label-4');
+
+let rightAnswers = [];
+let wrongAnswers = [];
 
 let dataset = [
     {
@@ -44,19 +46,20 @@ let dataset = [
     }
 ];
 
-let pickedImg = dataset[0];
-let rightAnswers = [];
-let wrongAnswers = [];
 
 function showCaptcha() {
-    // mettere qui il check per username e pass
-    generateCaptcha();
-    modal.classList.add('is-active');
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    if (username != '' && username != null && password != '' && password != null) {
+        generateCaptcha();
+        modal.classList.add('is-active');
+    }
+    else alert('Inserisci uno username ed una password.');
 };
 
 function generateCaptcha() {
     let rand = Math.floor(Math.random() * dataset.length);
-    pickedImg = dataset[rand];
+    let pickedImg = dataset[rand];
     img.src = pickedImg.src;
     let options = [pickedImg.firstAns, pickedImg.secondAns, pickedImg.wrongAns1, pickedImg.wrongAns2];
 
@@ -101,25 +104,30 @@ function loginSuccess() {
 }
 
 function loginFailed() {
-    alert('Verifica fallita! Riprovare.');
     document.getElementById('captcha-opt-1').checked = false;
     document.getElementById('captcha-opt-2').checked = false;
     document.getElementById('captcha-opt-3').checked = false;
     document.getElementById('captcha-opt-4').checked = false;
+    alert('Verifica fallita! Riprovare.');
     generateCaptcha();
 }
 
 function validateCaptcha() {
+    console.log('click');
     if (
         document.getElementById(rightAnswers[0]).checked == true
         && document.getElementById(rightAnswers[1]).checked == true) {
         if (document.getElementById(wrongAnswers[0]).checked == false
             && document.getElementById(wrongAnswers[1]).checked == false) { // change conditions
-            loginSuccess();
+            rightAnswers = [];
+            wrongAnswers = [];
+            return loginSuccess();
         }
 
     }
-    loginFailed();
+    rightAnswers = [];
+    wrongAnswers = [];
+    return loginFailed();
 
 };
 
