@@ -43,6 +43,13 @@ let dataset = [
         secondAns: 'Rosa',
         wrongAns1: 'Bastone',
         wrongAns2: 'Onda',
+    },
+    {
+        src: '/res/5.png',
+        firstAns: 'Pinguino',
+        secondAns: 'Macchina',
+        wrongAns1: 'Barca',
+        wrongAns2: 'Bandiera',
     }
 ];
 
