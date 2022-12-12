@@ -1,7 +1,7 @@
 let modal = document.querySelector('.captcha-modal');
 let login = document.getElementById('login-btn');
 let submit = document.getElementById('captcha-submit');
-let successPage = 'http://127.0.0.1:5500/logged.html';
+let successPage = 'https://dotseventeam.github.io/demo-captcha/logged';
 
 // let user = document.forms['login-form']['username'].value;
 // let password = document.forms['login-form']['password'].value;
